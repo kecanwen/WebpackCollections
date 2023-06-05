@@ -66,9 +66,9 @@ Some command-line options you should know.
 
 - `webpack` – building for development
 - `webpack -p` – building for production (minification)
-- `webpack --watch` – for continuous incremental building
+- `webpack --watch` – for continuous incremental building//热部署
 - `webpack -d` – including source maps
-- `webpack --colors` – making building output pretty
+- `webpack --colors` – making building output pretty//控制台增加写样式 提高开发体验
 
 You could customize `scripts` field in your package.json file as following.
 
