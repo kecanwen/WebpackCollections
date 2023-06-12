@@ -1,104 +1,18 @@
-This repo is a collection of simple demos of Webpack.
+收集日常开发相关的webpack配置，加以记录；方便后续开发查询
 
-These demos are purposely written in a simple and clear style. You will find no difficulty in following them to learn the powerful tool.
+## 目录
 
-## How to use
-
-First, install [Webpack](https://www.npmjs.com/package/webpack) and [webpack-dev-server](https://www.npmjs.com/package/webpack-dev-server) globally.
-
-```bash
-$ npm i -g webpack webpack-dev-server
-```
-
-Then, clone the repo.
-
-```bash
-$ git clone https://github.com/ruanyf/webpack-demos.git
-```
-
-Install the dependencies.
-
-```bash
-$ cd webpack-demos
-$ npm install
-```
-
-Now, play with the source files under the repo's demo* directories.
-
-```bash
-$ cd demo01
-$ npm run dev
-```
-
-If the above command doesn't open your browser automatically, you have to visit http://127.0.0.1:8080 by yourself.
-
-## Foreword: What is Webpack
-
-Webpack is a front-end tool to build JavaScript module scripts for browsers.
-
-It can be used similar to Browserify, and do much more.
-
-```bash
-$ browserify main.js > bundle.js
-# be equivalent to
-$ webpack main.js bundle.js
-```
-
-Webpack needs a configuration file called `webpack.config.js` which is just a CommonJS module.
-
-```javascript
-// webpack.config.js
-module.exports = {
-  entry: './main.js',
-  output: {
-    filename: 'bundle.js'
-  }
-};
-```
-
-After having `webpack.config.js`, you can invoke Webpack without any arguments.
-
-```bash
-$ webpack
-```
-
-Some command-line options you should know.
-
-- `webpack` – building for development
-- `webpack -p` – building for production (minification)
-- `webpack --watch` – for continuous incremental building//热部署
-- `webpack -d` – including source maps
-- `webpack --colors` – making building output pretty//控制台增加写样式 提高开发体验
-
-
-
-You could customize `scripts` field in your package.json file as following.
-
-```javascript
-// package.json
-{
-  // ...
-  "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors",
-    "deploy": "NODE_ENV=production webpack -p"
-  },
-  // ...
-}
-```
-
-## Index
-
-1. [Entry file](#demo01-entry-file-source)
-1. [Multiple entry files](#demo02-multiple-entry-files-source)
+1. [单入口](#demo01-entry-file-source)
+1. [多入口](#demo02-multiple-entry-files-source)
 1. [Babel-loader](#demo03-babel-loader-source)
 1. [CSS-loader](#demo04-css-loader-source)
 1. [Image loader](#demo05-image-loader-source)
 1. [CSS Module](#demo06-css-module-source)
 1. [UglifyJs Plugin](#demo07-uglifyjs-plugin-source)
-1. [HTML Webpack Plugin and Open Browser Webpack Plugin](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-source)
-1. [Environment flags](#demo09-environment-flags-source)
-1. [Code splitting](#demo10-code-splitting-source)
-1. [Code splitting with bundle-loader](#demo11-code-splitting-with-bundle-loader-source)
+1. [HTML Webpack Plugin](#demo08-html-webpack-plugin-and-open-browser-webpack-plugin-source)
+1. [开发生产环境标识](#demo09-environment-flags-source)
+1. [代码切割](#demo10-code-splitting-source)
+1. [bundle-loader](#demo11-code-splitting-with-bundle-loader-source)
 1. [Common chunk](#demo12-common-chunk-source)
 1. [Vendor chunk](#demo13-vendor-chunk-source)
 1. [Exposing Global Variables](#demo14-exposing-global-variables-source)
@@ -670,18 +584,19 @@ $ npm run dev
 
 On the surface, you won't feel any differences. However, Webpack actually builds `main.js` and `a.js` into different chunks(`bundle.js` and `0.bundle.js`), and loads `0.bundle.js` from `bundle.js` when on demand.
 
-## Demo11: Code splitting with bundle-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo11))
+## Demo11: bundle-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo11))
 
-Another way of code splitting is using [bundle-loader](https://www.npmjs.com/package/bundle-loader).
+部分参考[腾讯开发者文档](https://cloud.tencent.com/developer/section/1477509)
+
+用[bundle-loader](https://www.npmjs.com/package/bundle-loader).实现代码切割
 
 ```javascript
 // main.js
 
-// Now a.js is requested, it will be bundled into another file
+// 现在 a.js 被请求了，它将被打包到另一个文件中
 var load = require('bundle-loader!./a.js');
 
-// To wait until a.js is available (and get the exports)
-//  you need to async wait for it.
+// 等待 a.js 可用（并获取导出值）需要异步等待
 load(function(file) {
   document.open();
   document.write('<h1>' + file + '</h1>');
@@ -689,9 +604,9 @@ load(function(file) {
 });
 ```
 
-`require('bundle-loader!./a.js')` tells Webpack to load `a.js` from another chunk.
+`require('bundle-loader!./a.js')` 告诉webpack从另一个模块加载 `a.js`
 
-Now Webpack will build `main.js` into `bundle.js`, and `a.js` into `0.bundle.js`.
+现在webpack将`main.js` 打包到 `bundle.js`, 将 `a.js` 打包到  `0.bundle.js`.
 
 ## Demo12: Common chunk ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo12))
 

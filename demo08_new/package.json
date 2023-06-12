@@ -1,9 +1,0 @@
-{
-  "name": "webpack-demo08-new",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack"
-  },
-  "license": "MIT"
-}
