@@ -1,1 +1,1 @@
-module.exports = 'Hello World';
+module.exports = 'bundle-loaderbundle-loaderbundle-loaderbundle-loaderbundle-loader';
