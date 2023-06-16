@@ -531,11 +531,11 @@ $ cd demo09
 $ npm run dev
 ```
 
-## Demo10: Code splitting ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo10))
+## Demo10: 代码分割 ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo10))
 
-For big web apps, it’s not efficient to put all code into a single file. Webpack allows you to split a large JS file into several chunks. Especially, if some blocks of code are only required under some circumstances, these chunks could be loaded on demand.
+对于大型的应用, 将所有代码放在一个文件中是不高效的。Webpack允许您将一个大型JS文件拆分为几个块。特别是，如果只有在某些情况下才需要某些代码块，则可以根据需要加载这些代码块。
 
-Webpack uses `require.ensure` to define a split point ([official document](http://webpack.github.io/docs/code-splitting.html)).
+Webpack用 `require.ensure` 定义拆分点([official document](http://webpack.github.io/docs/code-splitting.html)).
 
 ```javascript
 // main.js
@@ -547,14 +547,14 @@ require.ensure(['./a'], function (require) {
 });
 ```
 
-`require.ensure` tells Webpack that `./a.js` should be separated from `bundle.js` and built into a single chunk file.
+`require.ensure` 告诉Webpack 将`./a.js` 从 `bundle.js` 分离出来 并且打包到一个单独的模块
 
 ```javascript
 // a.js
 module.exports = 'Hello World';
 ```
 
-Now Webpack takes care of the dependencies, output files and runtime stuff. You don't have to put any redundancy into your `index.html` and `webpack.config.js`.
+现在，Webpack负责处理依赖项、输出文件和运行时内容。您不必在“index.html”和“webpack.config.js”中添加任何冗余。
 
 ```html
 <html>
@@ -575,14 +575,14 @@ module.exports = {
 };
 ```
 
-Launch the server.
+启动服务
 
 ```bash
 $ cd demo10
 $ npm run dev
 ```
 
-On the surface, you won't feel any differences. However, Webpack actually builds `main.js` and `a.js` into different chunks(`bundle.js` and `0.bundle.js`), and loads `0.bundle.js` from `bundle.js` when on demand.
+从表面上看，你不会觉得有什么不同。然而，Webpack实际上将“main.js”和“a.js”构建成不同的块（“bundle.js”与“0.bundle.jss”），并在需要时从“bundle.js”加载“0.bundle.js”。
 
 ## Demo11: bundle-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo11))
 
