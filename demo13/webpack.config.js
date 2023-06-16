@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: {
@@ -6,6 +7,7 @@ module.exports = {
     vendor: ['jquery'],
   },
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   plugins: [

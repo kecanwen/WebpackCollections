@@ -689,7 +689,7 @@ module.exports = {
 
 ## Demo13: Vendor chunk ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo13))
 
-You can also extract the vendor libraries from a script into a separate file with CommonsChunkPlugin.
+您还可以使用CommonsChunkPlugin将供应商库从脚本中提取到一个单独的文件中。
 
 main.js
 
@@ -732,9 +732,9 @@ module.exports = {
 };
 ```
 
-In above codes, `entry.vendor: ['jquery']` tells Webpack that `jquery` should be included in the common chunk `vendor.js`.
+在上面的代码中，`entry.vendor:['jquery']`告诉Webpack，`jquery`应该包含在公共块`vendor.js`中。
 
-If you want a module available as a global variable in every module, such as making `$` and `jQuery` available in every module without writing `require("jquery")`. You should use `ProvidePlugin` ([Official doc](https://webpack.js.org/plugins/provide-plugin/)) which automatically loads modules instead of having to import or require them everywhere.
+如果您希望在每个模块中都有一个可用的模块作为全局变量，例如在不写`require（“jQuery”）`的情况下使`$`和`jQuery`在每个模块都可用。您应该使用“ProvidePlugin”（[官方文档](https://webpack.js.org/plugins/provide-plugin/))其自动加载模块，而不必在任何地方导入或需要它们。
 
 ```javascript
 // main.js
@@ -760,7 +760,7 @@ module.exports = {
 };
 ```
 
-Of course, in this case, you should load `jquery.js` globally by yourself.
+当然，在这种情况下，您应该自己全局加载“jquery.js”。
 
 ## Demo14: Exposing global variables ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo14))
 
