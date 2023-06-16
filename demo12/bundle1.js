@@ -1,13 +1,13 @@
 webpackJsonp([1],{
 
-/***/ 15:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var React = __webpack_require__(2);
-var ReactDOM = __webpack_require__(8);
+var React = __webpack_require__(1);
+var ReactDOM = __webpack_require__(4);
 ReactDOM.render(React.createElement(
   'h1',
   null,
@@ -16,4 +16,4 @@ ReactDOM.render(React.createElement(
 
 /***/ })
 
-},[15]);
+},[6]);

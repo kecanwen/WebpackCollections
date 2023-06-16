@@ -610,7 +610,7 @@ load(function(file) {
 
 ## Demo12: Common chunk ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo12))
 
-When multi scripts have common chunks, you can extract the common part into a separate file with [CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/), which is useful for browser caching and saving bandwidth.
+当多脚本具有公共块时，可以使用[CommonsChunkPlugin](https://webpack.js.org/plugins/commons-chunk-plugin/)将公共部分提取到一个单独的文件中, 这对于浏览器缓存和节省带宽是有用的。
 
 ```javascript
 // main1.jsx
@@ -646,7 +646,7 @@ index.html
 </html>
 ```
 
-The above `commons.js` is the common chunk of `main1.jsx` and `main2.jsx`. As you can imagine, `commons.js` includes `react` and `react-dom`.
+上面的“commons.js”是“main1.jsx”和“main2.jsx”的公共块。可以想象，“commons.js”包括“react”和“react dom”。
 
 webpack.config.js
 
