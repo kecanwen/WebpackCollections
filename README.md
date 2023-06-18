@@ -817,7 +817,7 @@ module.exports = {
 };
 ```
 
-Now, you require `data` as a module variable in your script. but it actually is a global variable.
+现在, 在你的script中你将 `data` 作为一个模块变量请求. 但它实际上是一个全局变量。
 
 ```javascript
 // main.jsx
@@ -831,7 +831,7 @@ ReactDOM.render(
 );
 ```
 
-You could also put `react` and `react-dom` into `externals`, which will greatly decrease the building time and building size of `bundle.js`.
+您还可以将`react`和`react dom`放入`externals`中，这将大大减少`bundle.js`的构建时间和构建大小。
 
 ## Demo15: React router ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo15))
 
