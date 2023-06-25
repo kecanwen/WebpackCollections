@@ -762,11 +762,11 @@ module.exports = {
 
 当然，在这种情况下，您应该自己全局加载“jquery.js”。
 
-## Demo14: Exposing global variables ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo14))
+## Demo14: 暴露全局变量([source](https://github.com/ruanyf/webpack-demos/tree/master/demo14))
 
-If you want to use some global variables, and don't want to include them in the Webpack bundle, you can enable `externals` field in `webpack.config.js` ([official document](https://webpack.js.org/configuration/externals/)).
+如果你希望使用一些全局变量, 并且不想将它们包含在Webpack捆绑包中，可以在`Webpack.config.js中启用`externals`字段`  ([official document](https://webpack.js.org/configuration/externals/)).
 
-For example, we have a `data.js`.
+举个例子，我们有一个 `data.js`.
 
 ```javascript
 // data.js
@@ -784,9 +784,9 @@ index.html
 </html>
 ```
 
-Attention, Webpack will only build `bundle.js`, but not `data.js`.
+值得注意的是, Webpack 将只会打包出 `bundle.js`, 而没有`data.js`.
 
-We can expose `data` as a global variable.
+我们将暴露`data` 作为一个全局变量
 
 ```javascript
 // webpack.config.js
@@ -817,7 +817,7 @@ module.exports = {
 };
 ```
 
-Now, you require `data` as a module variable in your script. but it actually is a global variable.
+现在, 在你的script中你将 `data` 作为一个模块变量请求. 但它实际上是一个全局变量。
 
 ```javascript
 // main.jsx
@@ -831,7 +831,7 @@ ReactDOM.render(
 );
 ```
 
-You could also put `react` and `react-dom` into `externals`, which will greatly decrease the building time and building size of `bundle.js`.
+您还可以将`react`和`react dom`放入`externals`中，这将大大减少`bundle.js`的构建时间和构建大小。
 
 ## Demo15: React router ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo15))
 
