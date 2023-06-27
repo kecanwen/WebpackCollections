@@ -15,7 +15,6 @@ class App extends React.Component {
             <li><Link to="/inbox">Inbox</Link></li>
             <li><Link to="/calendar">Calendar</Link></li>
           </ul>
-          Logged in as Jane
         </header>
         <main>
           <Switch>

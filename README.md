@@ -835,9 +835,9 @@ ReactDOM.render(
 
 ## Demo15: React router ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo15))
 
-This demo uses webpack to build [React-router](https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md)'s official example.
+这个demo展示用webpack去构建[React-router](https://github.com/rackt/react-router/blob/0.13.x/docs/guides/overview.md)的一个官方用例
 
-Let's imagine a little app with a dashboard, inbox, and calendar.
+想象一下一个拥有dashboard, inbox 和calendar的小型应用
 
 ```
 +---------------------------------------------------------+
@@ -909,7 +909,6 @@ class App extends React.Component {
             <li><Link to="/inbox">Inbox</Link></li>
             <li><Link to="/calendar">Calendar</Link></li>
           </ul>
-          Logged in as Jane
         </header>
         <main>
           <Switch>
