@@ -1,6 +1,6 @@
 # multi-entry-vue
 
-> Multi entry vue demo
+> 多入口 vue demo
 
 ## Build Setup
 
