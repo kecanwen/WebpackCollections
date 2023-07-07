@@ -25,7 +25,10 @@ module.exports = {
              loader: 'css-loader',
              options: {
                /**
-                * css-loader的作用主要是解析css文件中的@import和url语句，处理css-modules，并将结果作为一个js模块返回
+                * 1. 支持 CSS Modules：CSS Modules 可以帮助我们在组件中使用局部作用域的 CSS，避免全局样式的污染。
+                * 2. 支持自动添加浏览器前缀：CSS Loader 可以自动根据配置的浏览器兼容性规则，为生成的 CSS 代码自动添加浏览器前缀。
+                * 3. 支持压缩和优化 CSS 代码：CSS Loader 可以对 CSS 代码进行压缩和优化，减小文件的体积，提升页面加载速度。
+                * 4. 支持处理 CSS 中的图片和字体：CSS Loader 可以处理 CSS 中引用的图片和字体文件，将其转换为 Base64 编码，或者将其复制到构建目录中。
                 *
                 * css-loader中的 modules: true 是用来启用 CSS Modules 功能的。
                 * 启用 CSS Modules 后，CSS 样式的规则会被打包进一个随机生成的哈希值的 class 名，以避免样式冲突。
