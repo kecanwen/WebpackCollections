@@ -23,6 +23,7 @@ module.exports = {
     ]
   },
   plugins: [
+    //插件
     new HtmlwebpackPlugin({
       title: 'Webpack-demos',
       filename: 'index.html'
