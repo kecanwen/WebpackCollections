@@ -26,7 +26,7 @@ module.exports = {
     //插件
     new HtmlwebpackPlugin({
       title: 'Webpack-demos',
-      filename: 'index.html'
+      filename: './index.html'
     }),
   ]
 };
