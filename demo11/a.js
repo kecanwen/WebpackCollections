@@ -1,1 +1,1 @@
-module.exports = 'bundle-loaderbundle-loaderbundle-loaderbundle-loaderbundle-loader';
+module.exports = 'bundle-loaderbundle-loaderbundle-loaderbundle-loaderbundle-demo16';

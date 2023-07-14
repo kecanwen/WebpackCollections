@@ -9,7 +9,7 @@ module.exports = {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }

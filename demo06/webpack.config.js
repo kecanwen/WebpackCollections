@@ -9,7 +9,7 @@ module.exports = {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
@@ -19,10 +19,10 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-demo16'
           },
           {
-             loader: 'css-loader',
+             loader: 'css-demo16',
              options: {
                /**
                 * 1. 支持 CSS Modules：CSS Modules 可以帮助我们在组件中使用局部作用域的 CSS，避免全局样式的污染。

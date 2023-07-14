@@ -15,7 +15,7 @@ module.exports = {
         test: /\.(png|jpg)$/,
         use: [
           {
-            loader: 'url-loader',//url-loader的作用是将图片转换成DataURL的格式
+            loader: 'url-demo16',//url-loader的作用是将图片转换成DataURL的格式
             options: {
               limit: 8192
             }

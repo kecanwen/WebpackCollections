@@ -1,4 +1,4 @@
-var load = require('bundle-loader!./a.js');
+var load = require('bundle-demo16!./a.js');
 
 load(function(file) {
   document.open();

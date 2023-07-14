@@ -23864,7 +23864,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 /* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+// style-demo16: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
 var content = __webpack_require__(82);
@@ -23881,8 +23881,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./app.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./app.css");
+		module.hot.accept("!!../node_modules/css-demo16/index.js!./app.css", function() {
+			var newContent = require("!!../node_modules/css-demo16/index.js!./app.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -23913,7 +23913,7 @@ exports.push([module.i, "header *{\n  display: inline;\n  margin: 1em;\n  border
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
 */
-// css base code, injected by the css-loader
+// css base code, injected by the css-demo16
 module.exports = function(useSourceMap) {
 	var list = [];
 
@@ -24010,7 +24010,7 @@ var	memoize = function (fn) {
 var isOldIE = memoize(function () {
 	// Test for IE <= 9 as proposed by Browserhacks
 	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
+	// Tests for existence of standard globals is to allow style-demo16
 	// to operate correctly into non-standard environments
 	// @see https://github.com/webpack-contrib/style-loader/issues/177
 	return window && document && document.all && !window.atob;
@@ -24048,7 +24048,7 @@ var	fixUrls = __webpack_require__(85);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
-		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		if (typeof document !== "object") throw new Error("The style-demo16 cannot be used in a non-browser environment");
 	}
 
 	options = options || {};
@@ -24365,7 +24365,7 @@ function updateLink (link, options, obj) {
 
 
 /**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * When source maps are enabled, `style-demo16` uses a link element with a data-uri to
  * embed the css on the page. This breaks all relative urls because now they are relative to a
  * bundle instead of the current page.
  *
