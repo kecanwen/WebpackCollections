@@ -8,7 +8,6 @@
     "demo",
     "webpack"
   ],
-  "author": "Ruan Yifeng",
   "license": "MIT",
   "repository": "ruanyf/webpack-demos",
   "dependencies": {
