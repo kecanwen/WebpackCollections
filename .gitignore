@@ -1,7 +1,0 @@
-node_modules
-npm-debug.log
-package-lock.json
-.idea/webpack-demos.iml
-.idea/vcs.xml
-.idea/modules.xml
-.idea/workspace.xml
