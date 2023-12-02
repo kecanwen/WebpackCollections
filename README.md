@@ -139,7 +139,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
@@ -195,7 +195,7 @@ module.exports = {
     rules:[
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ 'style-demo16', 'css-demo16' ]
       },
     ]
   }
@@ -264,7 +264,7 @@ module.exports = {
         test: /\.(png|jpg)$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'url-demo16',
             options: {
               limit: 8192
             }
@@ -346,7 +346,7 @@ module.exports = {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
@@ -356,10 +356,10 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-demo16'
           },
           {
-             loader: 'css-loader',
+             loader: 'css-demo16',
              options: {
                modules: true
              }
@@ -594,7 +594,7 @@ $ npm run dev
 // main.js
 
 // 现在 a.js 被请求了，它将被打包到另一个文件中
-var load = require('bundle-loader!./a.js');
+var load = require('bundle-demo16!./a.js');
 
 // 等待 a.js 可用（并获取导出值）需要异步等待
 load(function(file) {
@@ -667,7 +667,7 @@ module.exports = {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
@@ -801,7 +801,7 @@ module.exports = {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
@@ -873,13 +873,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [ 'style-demo16', 'css-demo16' ]
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-demo16',
           options: {
             presets: ['es2015', 'react']
           }
