@@ -1,0 +1,14 @@
+{
+  "name": "codesplit",
+  "scripts": {
+    "dev": "webpack-dev-server --open --history-api-fallback",
+    "build": "webpack"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^3.3.3"
+  }
+}

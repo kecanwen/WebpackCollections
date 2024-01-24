@@ -1,0 +1,30 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "关于webpack5的学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kecanwen/webpackDictionary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kecanwen/webpackDictionary/issues"
+  },
+  "homepage": "https://github.com/kecanwen/webpackDictionary#readme",
+  "dependencies": {
+    "css-loader": "^6.8.1",
+    "element-ui": "^2.15.14",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "mini-css-extract-plugin": "^2.7.6"
+  }
+}
